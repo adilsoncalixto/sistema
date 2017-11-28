@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <title>Bootstrap File Field Plugin Examples</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/bootstrap_file_field.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/form/Bootstrap-File-Input-Enhancement-Plugin-With-jQuery.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container">
+    <div class="col-md-12">
+        <h3>Bootstrap File Field Plugin Examples</h3>
+
+        <hr>
+
+        <form role="form" enctype="multipart/form-data">
+
+            <!--<div class="form-group">-->
+                <!--<label for="photo" class="col-sm-3 control-label">Upload photos</label>-->
+                <!--<div class="col-sm-9 fileinput">-->
+                    <!--<span class="file-input btn btn-primary btn-file">-->
+                        <!--Select Files <input type="file" name="photo[]" data-file-types="image/jpeg,image/png,image/gif" multiple>-->
+                    <!--</span>-->
+                    <!--<p><small>You can select multiple files. Only jpeg, png and gif images are acceptable.</small></p>-->
+                    <!--<ul class="list-unstyled fileList"></ul>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="form-group">
+                <label for="sample1">Example 1: Initiating with data attribute, no customization</label>
+                    <p>
+                        <code>&lt;input type="file" data-field-type="bootstrap-file-filed" name="sample1"&gt;</code>
+                    </p>
+                    <input type="file" data-field-type="bootstrap-file-filed" name="sample1">
+            </div>
+
+            <div class="form-group">
+                <label for="sample2">Example 2: Single Image file with preview.</label>
+                <p>
+                    <code>&lt;input type="file" name="sample2" data-field-type="bootstrap-file-filed" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-preview="on" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-file-types="image/jpeg,image/png,image/gif"&gt;</code>
+                </p>
+                <input type="file" name="sample2"
+                       data-field-type="bootstrap-file-filed"
+                       data-file-types="image/jpeg,image/png,image/gif"
+                       data-preview="on">
+            </div>
+
+            <div class="form-group">
+                <label for="sample3">Example 3: Showing image preview, setting custom label, class and file types. Allows multiple.</label>
+                <p>
+                    <code>&lt;input type="file" name="sample3[]" data-field-type="bootstrap-file-filed" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-label="Select Image Files" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-btn-class="btn-primary" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-file-types="image/jpeg,image/png,image/gif" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-preview="on" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;multiple &gt;
+                    </code>
+                </p>
+                <input type="file" name="sample3[]"
+                       data-field-type="bootstrap-file-filed"
+                       data-label="Select Image Files"
+                       data-btn-class="btn-primary"
+                       data-file-types="image/jpeg,image/png,image/gif"
+                       data-preview="on"
+                       multiple
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sample4">Example 4: Allow PDF files only. Preview off.</label>
+                <p>
+                    <code>&lt;input type="file" name="sample4[]" data-field-type="bootstrap-file-filed" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-label="Select PDF Files" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-file-types="application/pdf" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;multiple &gt;
+                    </code>
+                </p>
+                <input type="file" name="sample4[]"
+                       data-field-type="bootstrap-file-filed"
+                       data-label="Select PDF Files"
+                       data-file-types="application/pdf"
+                       multiple
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sample5">Example 5: Initiating with javascript by class/selector. Select at most 2 images below 80kb each.</label>
+
+                <p>
+                    HTML : <br />
+                    <code>&lt;input type="file" class="smart-file" name="sample3[]" multiple&gt;</code><br>
+                    JavaScript <br />
+                    <code>
+                    $('.smart-file').bootstrapFileField({ <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;maxNumFiles: 2, <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;fileTypes: 'image/jpeg,image/png', <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;maxFileSize: 80000 <span class="text-muted">// 80kb in bytes</span> <br />
+                    });
+                    </code>
+
+                </p>
+                <input type="file" name="sample3[]" class="smart-file" multiple>
+            </div>
+            <div class="form-group">
+                <label for="sample6">Example 6: Overwriting initial (by javascript) configuration using data attribute</label>
+                <p>
+                    This field has already been initiated with previous example (as it has class <code>smart-file</code>).
+                    Now we'll add and modify some of customization options using data attributes.
+                </p>
+                <p>
+                    <code>
+                        &lt;input type="file" name="sample6[]" class="smart-file" multiple <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-label="Select PDF Documents" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-btn-class="btn-primary" <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;data-file-types="application/pdf"&gt;
+                    </code>
+                </p>
+                <input type="file" name="sample6[]" class="smart-file" multiple
+                       data-label="Select PDF Documents"
+                       data-btn-class="btn-primary"
+                       data-file-types="application/pdf">
+
+                <p><small><b>Help message:</b> You can select multiple files. Only PDF files under 80kb are acceptable.</small></p>
+
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" disabled>Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <p class="clearfix"></p><hr>
+
+
+  <div class="footer">
+        <p>&copy; ajaxray.com 2016</p>
+    </div>
+
+</div> <!-- /container -->
+
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../src/js/bootstrap_file_field.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.smart-file').bootstrapFileField({
+            maxNumFiles: 2,
+            fileTypes: 'image/jpeg,image/png',
+            maxFileSize: 800000 // 80kb in bytes
+        });
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

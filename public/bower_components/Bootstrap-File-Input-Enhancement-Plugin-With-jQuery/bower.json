@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-file-field",
+  "authors": [
+    "Anis Ahmad <anis.programmer@gmail.com>"
+  ],
+  "description": "jQuery plugin to enhance html file input to look like bootstrap button, showing image thumb and apply useful restrictions (e.g. file types, size, number of files etc.)",
+  "main": [
+    "src/js/bootstrap_file_field.js",
+    "src/css/bootstrap_file_field.css"
+  ],
+  "moduleType": "globals",
+  "keywords": [
+    "jquery-plugin",
+    "bootstrap",
+    "twitter-bootstrap",
+    "file",
+    "file-upload",
+    "file-field",
+    "html5-field"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ajaxray/bootstrap-file-field",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

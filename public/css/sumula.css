@@ -1,0 +1,68 @@
+body, strong, span{
+            font-size: 10.0pt!important;
+            font-weight:bold;
+        }
+        p.Normal {
+            margin: 0.0pt;
+            margin-top: 0.0pt;
+            margin-bottom: 0.0pt;
+            margin-left: 0.0pt;
+            margin-right: 0.0pt;
+            text-indent: 0.0pt;
+            font-family: "Arial";
+            font-size: 8.0pt;
+            color: Black;
+            font-weight: normal;
+        }
+        .parent{
+            border-spacing: 0;
+            border-collapse: collapse;
+            width:  100%;
+            position: relative;
+        }
+        .parent td{
+            margin: 0.0pt!important;
+            margin-top: 0.0pt!important;
+            margin-bottom: 0.0pt!important;
+            margin-left: 0.0pt!important;
+            margin-right: 0.0pt!important;
+            text-indent: 0.0pt!important;
+            font-family: "Arial"!important; 
+            font-size: 10.0pt!important;
+            color: black!important;
+            font-weight: normal!important;
+            padding: 0px 2px!important;
+            vertical-align: bottom!important;
+            border-color: black!important;
+        }
+        label{font-weight: normal;}
+        .bg{
+            background-color:#ccc;
+        }
+
+.btn-circle {
+    width: 38px;
+    height: 38px;
+    padding: 6px 0;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.428571429;
+    bottom: -9px;
+    position: absolute;
+    background: #FFF!important;
+    z-index: 99;
+}
+
+span.td-title {
+    /* Rotate div */
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    display: inline-table;
+    position: relative;
+    bottom: 22px;
+}
+table{
+    margin-bottom: 0px!important;
+}
